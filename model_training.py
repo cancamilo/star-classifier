@@ -43,7 +43,3 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 xgb_model.fit(X_train, y_train, eval_set=[(X_test, y_test)], verbose=True)
 
 xgb_model.save_model("models/xgboost_model.json")
-
-
-if __name__ == "__main__":
-    print("hello", df.shape)

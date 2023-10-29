@@ -4,7 +4,7 @@ The purpose of this project is to use photometric and spectroscopy data observat
 
 The dataset is provided by the [SDSS project (Sloan Digital Sky Survey)](https://en.wikipedia.org/wiki/Sloan_Digital_Sky_Survey). The data contains thousands of photometric observations of astronomical objects. Each observation is labeled with the type of objects which can be galaxies, stars, and quasars.
 
-What type of data are we dealing with? 
+## What type of data are we dealing with? 
 
 The SDD telescopes are equipped with imaging cameras that measure the intensity of incoming radiation in the electromagnetic spectrum. In the cameras, different type of filters are placed to measure the radiation at different frequencies. This intensities are available as features in the dataset:
 
