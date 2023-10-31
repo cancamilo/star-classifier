@@ -18,6 +18,9 @@ quart = "^0.19.3"
 hypercorn = "^0.15.0"
 
 
+[tool.poetry.group.dev.dependencies]
+awsebcli = "^3.20.10"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

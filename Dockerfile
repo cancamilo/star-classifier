@@ -32,6 +32,9 @@ ENV VIRTUAL_ENV=/app/.venv \
 
 COPY --from=builder-base ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
-COPY app models ./app/
+WORKDIR /app
+COPY app ./
+COPY models ./models
 
+EXPOSE 8000
 ENTRYPOINT ["hypercorn", "--bind", "0.0.0.0:8000", "predict_service:app"]
