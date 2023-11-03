@@ -14,6 +14,20 @@ df = df[position_columns + filter_columns + target_col]
 # Clean outliers
 df = df[(df["u"] != -9999.0) & (df["g"] != -9999.0) & (df["z"] != -9999.0)]
 
+print("Training model parameters: ")
+print("""
+    objective="multi:softprob", 
+    colsample_bytree=0.798,
+    random_state=42, 
+    learning_rate=0.29, 
+    gamma=0.0598, 
+    max_depth=5, 
+    n_estimators=124,
+    subsample=0.877,
+    eval_metric="auc",
+    early_stopping_rounds=20
+""")
+
 # Initialize the model with previously optimized parameters
 xgb_model = xgb.XGBClassifier(
     objective="multi:softprob", 
@@ -43,3 +57,5 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 xgb_model.fit(X_train, y_train, eval_set=[(X_test, y_test)], verbose=True)
 
 xgb_model.save_model("models/xgboost_model.json")
+
+print("model saved to models/xgboost_model.json")
