@@ -1,13 +1,13 @@
 # Star classification with Machine Learning
 
-The purpose of this project is to use photometric and spectroscopy data observations to train a machine learning model that classifies objects into three different classes: stars, galaxies, and quasars. The trained model is wrapped into a prediction service that can be used locally or deployed to the cloud using AWS Elastic Beanstalk.
+The purpose of this project is to use telescopes photometric and spectroscopy data from sky observations to train a machine learning model that classifies objects into three different classes: stars, galaxies, and quasars. The trained model is wrapped into a prediction service that can be used locally or deployed to the cloud using AWS Elastic Beanstalk.
 
 The project is organzied as follows:
 - [Data explanation](#what-type-of-data-are-we-dealing-with)
-- [Environment setup](#)
-- [Exploring the data](#)
-- [Training the model](#)
-- [Runing the service](#)
+- [Environment setup](#environment-setup)
+- [Exploring the data](#exploring-the-data)
+- [Training the model](#training-the-model)
+- [Runing the service](#running-the-service)
 
 ## What type of data are we dealing with? 
 
