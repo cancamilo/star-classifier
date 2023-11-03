@@ -41,6 +41,8 @@ poetry install
 
 Which will read from the [pyproject.toml](pyproject.toml) to install the required dependencies. 
 
+In order to activate this environment it is enough to run ```poetry shell```.
+
 Finally, make sure that you have Docker setup in your system and the aws-cli if you want to deploy the service to the cloud.
 
 ## Exploring the data
