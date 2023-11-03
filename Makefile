@@ -19,3 +19,10 @@ build-image:
 .PHONY: run-server
 run-server:
 	@docker run -it --rm -p 8000:8000 star-test
+
+.PHONY: aws-deploy
+aws-deploy:
+	@eb create --timeout 25 --instance-types "t3.small"  star-prediction-env
+
+.PHONY: aws-delete-env
+	@eb terminate star-prediction-env
